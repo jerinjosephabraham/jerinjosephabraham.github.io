@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Jerin Joseph Abraham | Graduate Civil Engineer</title>
+<meta name="description" content="ePortfolio of Jerin Joseph Abraham, Master of Professional Engineering (Civil) student at UTS: landing page, resume and cover letter.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#EDF1F3;
+  --panel:#F8FAFB;
+  --ink:#16232F;
+  --muted:#4A5966;
+  --road:#A9B5BE;
+  --line:#CAD4DB;
+  --accent:#137A4E;
+  --on-accent:#FFFFFF;
+  --flag:#B93C0A;
+  --f-display:'Barlow Condensed','Arial Narrow',Arial,sans-serif;
+  --f-text:'Source Serif 4',Georgia,'Times New Roman',serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1A22;
+    --panel:#15232D;
+    --ink:#E6EDF1;
+    --muted:#9FB0BC;
+    --road:#4A5B68;
+    --line:#2A3A46;
+    --accent:#3DD68C;
+    --on-accent:#06140D;
+    --flag:#FB923C;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1A22;
+  --panel:#15232D;
+  --ink:#E6EDF1;
+  --muted:#9FB0BC;
+  --road:#4A5B68;
+  --line:#2A3A46;
+  --accent:#3DD68C;
+  --on-accent:#06140D;
+  --flag:#FB923C;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px);}
+*,*::before,*::after{box-sizing:border-box;}
+html,body{margin:0;}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:var(--f-text);
+  font-size:1.0625rem;
+  line-height:1.6;
+  -webkit-text-size-adjust:100%;
+}
+[hidden]{display:none !important;}
+a{color:var(--accent);text-underline-offset:.18em;}
+a:hover{text-decoration-thickness:2px;}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:2px;}
+h1,h2,h3{font-family:var(--f-display);font-weight:600;margin:0;line-height:1.05;}
+p{margin:0 0 1em;}
+ul{margin:0;}
+.wrap{max-width:1120px;margin:0 auto;padding:0 clamp(1.1rem,4vw,2.5rem);}
+main:focus{outline:none;}
+
+/* Navigation */
+.site-nav{
+  position:sticky;
+  top:env(safe-area-inset-top,0px);
+  z-index:10;
+  background:var(--bg);
+  border-bottom:1px solid var(--line);
+}
+.site-nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;min-height:3.5rem;}
+.brand{font-family:var(--f-display);font-weight:700;font-size:1.35rem;color:var(--ink);text-decoration:none;padding:.5rem 0;}
+.site-nav ul{list-style:none;padding:0;display:flex;gap:.25rem;}
+.site-nav li a{
+  display:block;
+  font-family:var(--f-display);
+  font-weight:600;
+  font-size:1.2rem;
+  color:var(--muted);
+  text-decoration:none;
+  padding:.7rem .8rem .55rem;
+  border-bottom:3px solid transparent;
+}
+.site-nav li a:hover{color:var(--ink);}
+.site-nav li a[aria-current="page"]{color:var(--ink);border-bottom-color:var(--accent);}
+
+/* Buttons */
+.btn{
+  display:inline-block;
+  font-family:var(--f-display);
+  font-weight:600;
+  font-size:1.2rem;
+  padding:.65rem 1.25rem .55rem;
+  border-radius:4px;
+  text-decoration:none;
+  border:2px solid var(--accent);
+  cursor:pointer;
+  line-height:1.2;
+}
+.btn-solid{background:var(--accent);color:var(--on-accent);}
+.btn-solid:hover{filter:brightness(1.08);}
+.btn-line{background:transparent;color:var(--accent);}
+.btn-line:hover{background:var(--panel);}
+
+/* Landing */
+.hero{
+  display:grid;
+  grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);
+  gap:clamp(2rem,5vw,4.5rem);
+  align-items:center;
+  padding:clamp(2.5rem,7vw,5rem) 0 clamp(2.5rem,6vw,4rem);
+}
+.hero h1{
+  font-weight:700;
+  font-size:clamp(3rem,8.5vw,5.5rem);
+  line-height:.92;
+  letter-spacing:-.01em;
+  text-wrap:balance;
+}
+.hero .role{
+  font-family:var(--f-display);
+  font-weight:600;
+  font-size:clamp(1.5rem,3vw,1.9rem);
+  color:var(--accent);
+  margin:.6rem 0 1.4rem;
+}
+.hero .intro p{max-width:56ch;}
+.actions{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.6rem;}
+
+.net-figure{margin:0;}
+.net-panel{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:8px;
+  padding:clamp(.6rem,2vw,1rem);
+}
+.net{display:block;width:100%;height:auto;}
+.net .road{fill:none;stroke:var(--road);stroke-linecap:round;stroke-linejoin:round;}
+.net .node{fill:var(--bg);stroke:var(--road);stroke-width:2;}
+.net .cycle{fill:none;stroke:var(--accent);stroke-width:5;stroke-linecap:round;stroke-linejoin:round;}
+.net .link{fill:none;stroke:var(--accent);stroke-width:5;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset .7s ease;}
+.net .detour{fill:none;stroke:var(--flag);stroke-width:3;stroke-dasharray:7 6;stroke-linecap:round;transition:opacity .4s ease;}
+.net .mark{fill:none;stroke:var(--flag);stroke-width:3;transition:stroke .4s ease;}
+.net .lbl{font-family:var(--f-display);font-weight:600;font-size:17px;paint-order:stroke;stroke:var(--panel);stroke-width:5px;stroke-linejoin:round;transition:opacity .4s ease;}
+.net .lbl-cycle{fill:var(--accent);}
+.net .lbl-flag{fill:var(--flag);}
+.net .lbl-fixed{fill:var(--accent);opacity:0;}
+.net.is-connected .link{stroke-dashoffset:0;}
+.net.is-connected .detour,.net.is-connected .lbl-broken,.net.is-connected .lbl-detour{opacity:0;}
+.net.is-connected .lbl-fixed{opacity:1;}
+.net.is-connected .mark{stroke:var(--accent);}
+.net-figure figcaption{margin-top:.9rem;font-size:.98rem;color:var(--muted);}
+.net-status{min-height:3.2em;margin:.9rem 0 .7rem;color:var(--ink);}
+.net-note{margin:.4rem 0 0;font-size:.9rem;color:var(--muted);}
+
+.marks{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:clamp(1.5rem,4vw,3rem);
+  padding:clamp(2rem,5vw,3rem) 0 clamp(2.5rem,6vw,4rem);
+  border-top:1px solid var(--line);
+}
+.marks h2{font-size:1.6rem;}
+.marks .who{color:var(--accent);font-family:var(--f-display);font-weight:600;font-size:1.15rem;margin:.25rem 0 .6rem;}
+.marks p{margin:0;max-width:40ch;}
+
+/* Resume */
+.page-head{padding:clamp(2rem,5vw,3.5rem) 0 1.5rem;}
+.page-head h1{font-size:clamp(2.6rem,6vw,3.8rem);font-weight:700;}
+.contact-line{display:flex;flex-wrap:wrap;gap:.3rem 1.6rem;margin:.9rem 0 0;padding:0;list-style:none;color:var(--muted);}
+.resume-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 17.5rem;
+  gap:clamp(2rem,5vw,4rem);
+  padding:1rem 0 clamp(3rem,6vw,4.5rem);
+  align-items:start;
+}
+.block{margin-bottom:2.4rem;}
+.block>h2{font-size:1.75rem;padding-bottom:.45rem;border-bottom:1px solid var(--line);margin-bottom:1.2rem;}
+.entry{
+  position:relative;
+  margin-left:.4rem;
+  padding:0 0 1.7rem 1.5rem;
+  border-left:2px solid var(--line);
+}
+.entry:last-child{padding-bottom:.2rem;}
+.entry::before{
+  content:"";
+  position:absolute;
+  left:-8px;top:.4rem;
+  width:14px;height:14px;
+  border-radius:50%;
+  background:var(--bg);
+  border:3px solid var(--accent);
+}
+.entry-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:.1rem 1rem;}
+.entry-head h3{font-size:1.4rem;}
+.when{font-family:var(--f-display);font-weight:500;font-size:1.1rem;color:var(--muted);}
+.org{margin:.15rem 0 .7rem;color:var(--muted);}
+.entry ul,.block>ul{padding-left:1.15rem;}
+.entry li,.block>ul li{margin:.4rem 0;padding-left:.15rem;}
+.course{margin:.3rem 0 0;color:var(--muted);}
+.aside section{margin-bottom:2rem;}
+.aside h2{font-size:1.4rem;padding-bottom:.4rem;border-bottom:1px solid var(--line);margin-bottom:.8rem;}
+.aside ul{list-style:none;padding:0;}
+.aside li{margin:.35rem 0;}
+.aside h3{font-size:1.1rem;color:var(--muted);font-weight:600;margin:1rem 0 .3rem;}
+.aside p{margin:0;overflow-wrap:anywhere;}
+
+/* Cover letter */
+.letter-wrap{padding:0 0 clamp(3rem,6vw,4.5rem);}
+.letter{max-width:42rem;font-size:1.125rem;line-height:1.7;}
+.letter address{font-style:normal;margin:0 0 1.6rem;}
+.letter .date{margin-bottom:1.6rem;}
+.letter h3{font-size:1.5rem;line-height:1.15;margin:2rem 0 .6rem;}
+.letter h3 .ref{color:var(--accent);white-space:nowrap;}
+.letter .sign{margin-top:1.5rem;}
+
+/* Footer */
+.site-foot{border-top:1px solid var(--line);padding:1.6rem 0 2rem;color:var(--muted);font-size:.98rem;}
+.site-foot .wrap{display:flex;flex-wrap:wrap;gap:.4rem 2rem;justify-content:space-between;}
+.site-foot p{margin:0;}
+
+@media (max-width:860px){
+  .hero{grid-template-columns:minmax(0,1fr);}
+  .marks{grid-template-columns:minmax(0,1fr);}
+  .resume-grid{grid-template-columns:minmax(0,1fr);}
+}
+@media (prefers-reduced-motion: reduce){
+  .net .link,.net .detour,.net .mark,.net .lbl{transition:none;}
+}
+</style>
+<noscript><style>[data-page][hidden]{display:block !important;}</style></noscript>
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="wrap">
+    <a class="brand" href="#home">Jerin Joseph Abraham</a>
+    <nav aria-label="Portfolio sections">
+      <ul>
+        <li><a href="#home" data-target="home">Home</a></li>
+        <li><a href="#resume" data-target="resume">Resume</a></li>
+        <li><a href="#cover-letter" data-target="cover-letter">Cover letter</a></li>
+        <li><a href="#reflection" data-target="reflection">Reflection</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+
+<!-- PART 1: LANDING PAGE -->
+<section id="page-home" data-page="home">
+  <div class="wrap">
+    <div class="hero">
+      <div class="intro">
+        <h1>Jerin Joseph Abraham</h1>
+        <p class="role">Graduate Civil Engineer</p>
+        <p>I am a Master of Professional Engineering (Civil) student at the University of Technology Sydney, passionate about building reliable infrastructure and using resources responsibly. Making sure the systems people depend on work properly is the reason I chose this career.</p>
+        <p>I have checked Sydney’s transport network models on the BASIS project, learnt building standards at Palathra Constructions, and led a team of four on a B.Tech energy storage project using green waste. These experiences taught me the value of accuracy, communication and sustainability.</p>
+        <p>I am curious and hard-working, and I believe in lifelong learning as I grow into a graduate civil engineer.</p>
+        <div class="actions">
+          <a class="btn btn-solid" href="#resume">Read my resume</a>
+          <a class="btn btn-line" href="#cover-letter">Read my cover letter</a>
+        </div>
+      </div>
+
+      <figure class="net-figure">
+        <div class="net-panel">
+          <svg id="net" class="net" viewBox="0 0 560 420" role="img" aria-label="Simplified road network with a green cycleway that has a gap at one intersection. An orange dashed detour shows the longer route cyclists must take until the gap is connected.">
+            <!-- Roads -->
+            <path class="road" d="M20 330 H540" stroke-width="10"/>
+            <path class="road" d="M20 90 H540" stroke-width="10"/>
+            <path class="road" d="M120 30 V400" stroke-width="10"/>
+            <path class="road" d="M300 30 V400" stroke-width="10"/>
+            <path class="road" d="M470 30 V400" stroke-width="10"/>
+            <path class="road" d="M20 230 C160 170 320 290 540 215" stroke-width="7"/>
+            <!-- Intersections -->
+            <circle class="node" cx="120" cy="90" r="7"/>
+            <circle class="node" cx="300" cy="90" r="7"/>
+            <circle class="node" cx="470" cy="90" r="7"/>
+            <circle class="node" cx="120" cy="330" r="7"/>
+            <circle class="node" cx="300" cy="330" r="7"/>
+            <circle class="node" cx="470" cy="330" r="7"/>
+            <!-- Cycleway -->
+            <path class="cycle" d="M134 330 V150 H286"/>
+            <path class="cycle" d="M314 150 H456 V330"/>
+            <!-- Detour while the link is missing -->
+            <path class="detour" d="M286 150 V330 H314 V150"/>
+            <!-- The missing link -->
+            <path class="link" pathLength="1" d="M286 150 H314"/>
+            <circle class="mark" cx="300" cy="150" r="13"/>
+            <!-- Labels -->
+            <text class="lbl lbl-cycle" x="160" y="140">Cycleway</text>
+            <text class="lbl lbl-flag lbl-broken" x="300" y="118" text-anchor="middle">Missing link</text>
+            <text class="lbl lbl-fixed" x="300" y="118" text-anchor="middle">Connected</text>
+            <text class="lbl lbl-flag lbl-detour" x="276" y="262" text-anchor="end">Detour</text>
+          </svg>
+        </div>
+        <figcaption>
+          <p class="net-status" id="net-status" aria-live="polite">The cycleway stops short of the intersection. Cyclists take a long detour, so the model reports inflated travel times.</p>
+          <button type="button" class="btn btn-line" id="net-toggle">Connect the link</button>
+          <p class="net-note">A simplified illustration of a cycleway fault I found while checking Sydney’s networks on the BASIS project.</p>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="marks">
+      <div>
+        <h2>BASIS project</h2>
+        <p class="who">Research Assistant, UTS</p>
+        <p>Checking Sydney’s traffic, public transport and cycling network maps, and the code and metric calculations behind them.</p>
+      </div>
+      <div>
+        <h2>Palathra Constructions</h2>
+        <p class="who">Civil Engineering Intern, Kerala</p>
+        <p>Supporting site supervision, quality inspections and quantity measurements on a university canteen build.</p>
+      </div>
+      <div>
+        <h2>Green waste energy storage</h2>
+        <p class="who">Team leader, B.Tech project</p>
+        <p>Leading a team of four testing banana skin, coconut fibre and pineapple skin as sources of activated carbon.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PART 2: RESUME -->
+<section id="page-resume" data-page="resume" hidden>
+  <div class="wrap">
+    <div class="page-head">
+      <h1>Jerin Joseph Abraham</h1>
+      <ul class="contact-line">
+        <li><a href="mailto:jerinjosephabraham1@gmail.com">jerinjosephabraham1@gmail.com</a></li>
+        <li><a href="https://www.linkedin.com/in/jerin-joseph-abraham-ba31b220a" target="_blank" rel="noopener">LinkedIn profile</a></li>
+      </ul>
+    </div>
+
+    <div class="resume-grid">
+      <div class="resume-main">
+        <div class="block">
+          <h2>Career summary</h2>
+          <p>Motivated Master of Professional Engineering (Civil) student at the University of Technology Sydney with a Bachelor of Civil Engineering and practical construction site experience. Research Assistant on the BASIS project at UTS, supporting transport scenario-testing, modelling, quality assurance, data review and technical issue documentation. Strong foundation in transport modelling, site inspection, quality assurance, construction documentation and project planning, with proficiency in AutoCAD, Revit, Synchro 4D and Microsoft Excel. Eager to contribute analytical skills, attention to detail and teamwork to the design, delivery and improvement of civil engineering projects as a graduate engineer.</p>
+        </div>
+
+        <div class="block">
+          <h2>Work &amp; volunteer experience</h2>
+
+          <article class="entry">
+            <div class="entry-head">
+              <h3>Research Assistant, BASIS Project</h3>
+              <span class="when">August 2026 – Present</span>
+            </div>
+            <p class="org">University of Technology Sydney (UTS), Sydney, Australia</p>
+            <ul>
+              <li>Supported scenario-testing and quality-assurance activities for the BASIS project using the BASIS modelling platform, working with the UTS and UNSW research teams.</li>
+              <li>Ran defined transport scenarios and reviewed model inputs, assumptions, code execution, outputs and performance measures.</li>
+              <li>Checked Sydney traffic, public transport and cycling network maps for errors, confirming that pathways were correct and properly connected.</li>
+              <li>Assisted with checking coding and metric calculations to improve the reliability and consistency of model outputs.</li>
+              <li>Documented identified issues and findings, including inconsistencies referred to the UNSW team, for review and contributed to quality-assurance processes.</li>
+            </ul>
+          </article>
+
+          <article class="entry">
+            <div class="entry-head">
+              <h3>Ageing &amp; Disability Placement</h3>
+            </div>
+            <p class="org">St. Christophorus Retirement Village</p>
+            <ul>
+              <li>Communicated effectively with residents and multidisciplinary staff while maintaining professional standards.</li>
+              <li>Demonstrated teamwork, responsibility, empathy and time management in a healthcare environment.</li>
+            </ul>
+          </article>
+
+          <article class="entry">
+            <div class="entry-head">
+              <h3>Civil Engineering Intern</h3>
+              <span class="when">May 2023 – June 2023</span>
+            </div>
+            <p class="org">Palathra Constructions Pvt. Ltd., Kerala, India</p>
+            <ul>
+              <li>Assisted site engineers in supervising daily construction activities and monitoring project progress on the construction of a university canteen.</li>
+              <li>Assisted with quality inspections to check compliance with engineering drawings and construction specifications.</li>
+              <li>Assisted with quantity measurements and site documentation to support project delivery.</li>
+              <li>Collaborated with engineers, contractors and subcontractors to coordinate construction activities.</li>
+              <li>Supported planning and scheduling activities while maintaining a safe working environment.</li>
+              <li>Learned the building standards and drawing requirements that govern work on site.</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="block">
+          <h2>Projects</h2>
+
+          <article class="entry">
+            <div class="entry-head">
+              <h3>Addressing Modern Slavery in Engineering Internships</h3>
+              <span class="when">2026</span>
+            </div>
+            <p class="org">Graduate Project, University of Technology Sydney</p>
+            <ul>
+              <li>Conducted a qualitative research study examining how modern slavery and labour exploitation are understood and addressed within engineering internship contexts in Australia.</li>
+              <li>Analysed 14 government, corporate, university, NGO and academic sources using documentary analysis and thematic analysis.</li>
+              <li>Identified key themes including student vulnerability, power imbalance, corporate responsibility, policy gaps and organisational silence.</li>
+              <li>Developed a proposed evaluation framework covering ethical awareness, ethical decision-making, organisational power awareness, reporting confidence and cultural/social understanding.</li>
+              <li>Evaluated existing governance and assessment approaches and developed recommendations for more student-centred ethical practices in engineering internships.</li>
+            </ul>
+          </article>
+
+          <article class="entry">
+            <div class="entry-head">
+              <h3>Team leader</h3>
+              <span class="when">May 2023 – May 2024</span>
+            </div>
+            <p class="org">Green Waste Utilisation for Sustainable Energy Engineering Application: A Path Towards Circular Green Economy</p>
+            <ul>
+              <li>Led a team of four on a B.Tech project that used locally available green waste to build an energy storage system, supporting circular economy and sustainable practices.</li>
+              <li>Tested banana skin, coconut fibre and pineapple skin as sources of activated carbon.</li>
+              <li>Divided the work between team members and checked and compared their results to keep findings consistent.</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="block">
+          <h2>Knowledge &amp; skills</h2>
+          <ul>
+            <li>Core expertise in civil engineering practice, including site inspection, quality assurance, quantity estimation, construction documentation and project planning.</li>
+            <li>Transport modelling and scenario testing: running defined scenarios, reviewing inputs, assumptions, code execution and performance measures, and documenting issues for review.</li>
+            <li>Project management using Synchro 4D, with knowledge of quality management, risk assessment and project scheduling.</li>
+            <li>Engineering software and reporting using AutoCAD, Revit and Microsoft Excel; skilled in data review and technical report writing.</li>
+            <li>Professional strengths in communication, teamwork, analytical problem solving and working with multidisciplinary teams, contractors and subcontractors.</li>
+            <li>Professional membership: Engineers Australia (Student Member).</li>
+          </ul>
+        </div>
+
+        <div class="block">
+          <h2>Education</h2>
+          <article class="entry">
+            <div class="entry-head">
+              <h3>Master of Professional Engineering, Civil Engineering</h3>
+              <span class="when">March 2025 – December 2026 (expected)</span>
+            </div>
+            <p class="org">University of Technology Sydney</p>
+            <p class="course">Relevant coursework: Project Management, Underground Construction and Management, Tunnel Boring and Trenchless Technologies</p>
+          </article>
+          <article class="entry">
+            <div class="entry-head">
+              <h3>B.Tech in Civil Engineering</h3>
+              <span class="when">October 2020 – June 2024</span>
+            </div>
+            <p class="org">Amal Jyothi College of Engineering, Kerala, India</p>
+          </article>
+        </div>
+      </div>
+
+      <aside class="aside" aria-label="Skills and interests">
+        <section>
+          <h2>Interests</h2>
+          <h3>Technical skills</h3>
+          <p>AutoCAD, Revit, Synchro 4D, Microsoft Excel, Microsoft Word, PowerPoint</p>
+          <h3>Areas of interest</h3>
+          <ul>
+            <li>Transport modelling</li>
+            <li>Quality assurance</li>
+            <li>Construction and project management</li>
+            <li>Underground construction and tunnelling</li>
+            <li>Sustainable engineering</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Referees</h2>
+          <p>Available on request</p>
+        </section>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- PART 3: COVER LETTER -->
+<section id="page-letter" data-page="cover-letter" hidden>
+  <div class="wrap">
+    <div class="page-head">
+      <h1>Cover letter</h1>
+    </div>
+    <div class="letter-wrap">
+      <article class="letter">
+        <address>
+          Jerin Joseph Abraham<br>
+          Ashfield, NSW, Australia<br>
+          <a href="mailto:jerinjosephabraham1@gmail.com">jerinjosephabraham1@gmail.com</a><br>
+          LinkedIn: <a href="https://www.linkedin.com/in/jerin-joseph-abraham-ba31b220a" target="_blank" rel="noopener">linkedin.com/in/jerin-joseph-abraham-ba31b220a</a>
+        </address>
+
+        <p class="date">2 September 2026</p>
+
+        <address>
+          Hiring Manager<br>
+          Industrus Engineering
+        </address>
+
+        <p>Dear Hiring Manager,</p>
+
+        <p>I am writing to apply for the Industrus Engineering Graduate Program as a graduate civil engineer with practical experience in transport model quality assurance. I am completing a Master of Professional Engineering (Civil) at the University of Technology Sydney. During a 12-week internship on the Behavioural Analytics &amp; Scenario Insights System (BASIS) project, I checked the traffic, public transport and cycling network maps of Sydney for errors, confirming that pathways were correct and properly connected, and reviewed the model’s code and metric calculations. One of these checks led to a network connection error being corrected before further scenario testing. Inconsistencies I found were documented and passed to the UNSW research team for review. Earlier, I completed an internship with Palathra Constructions on the construction of a university canteen, where I learned the building standards and drawing requirements that govern work on site.</p>
+
+        <h3>A commitment to ethical conduct and the highest standards of professional accountability <span class="ref">(3.1)</span></h3>
+        <p>Transport model results are only reliable if the network behind them is correct. Errors such as a missing or wrongly connected link can distort travel time, delay and accessibility outcomes. While checking the Sydney traffic, public transport and cycling maps, I looked for pathways that were incorrect or not properly connected, and reviewed the related code and metric calculations. On the cycling network, I found a path segment that was not connected to the adjoining route at an intersection, which forced cyclists onto a longer detour and inflated the travel times reported for that area. I documented the issue with supporting evidence and sent it to the UNSW team responsible for review, rather than correcting it myself or assuming it was acceptable. The team confirmed the error and corrected the connection, and I rechecked the affected results to confirm they were consistent. At Palathra Constructions, I learned how work is checked against building standards and drawings, which reinforced why accurate records matter.</p>
+
+        <h3>Demonstrated ability to effectively communicate both with other engineers and with stakeholders from different fields <span class="ref">(3.2)</span></h3>
+        <p>Because the people reviewing my findings were in a different research team, each issue had to make sense without me explaining it in person. I recorded what I observed, where in the network it occurred, the supporting evidence and why it mattered for the results, so the UNSW team could act on it without needing follow-up questions. As a result, the team was able to locate and resolve the issue without needing to ask me for further explanation. I also worked with both the UTS and UNSW teams, adjusting how much technical background I included depending on who was reading.</p>
+
+        <h3>The ability to engage with a creative, innovative and proactive environment <span class="ref">(3.3)</span></h3>
+        <p>BASIS uses modelling and digital tools to test transport scenarios against measures such as travel time, delay, throughput, congestion, reliability, accessibility and mode share. I did not treat model runs as routine output. I considered whether the networks and calculations behind each measure would produce results reliable enough to support decisions. I suggested adding a routine connectivity check whenever a new map layer is introduced, and the team noted it for future scenario testing. This showed me how much innovation in engineering depends on trustworthy tools, and I want to work in an environment that encourages new approaches to that kind of problem.</p>
+
+        <h3>Demonstrated ability to use and manage information <span class="ref">(3.4)</span></h3>
+        <p>My BASIS work involved several linked types of information: three network maps, model code, metric calculations and the issues I found. To keep this manageable, I recorded each issue in a consistent log noting the map layer, location, related code or calculation, supporting evidence and date, which meant the team could locate and verify each issue quickly. My Master’s studies have also developed my skills in technical reporting and engineering analysis.</p>
+
+        <h3>The ability to manage your own performance in a professional environment <span class="ref">(3.5)</span></h3>
+        <p>I completed the 12-week internship alongside my postgraduate studies by setting aside fixed weekly blocks for map checks and reporting, and updating my supervisor on progress each week, and I completed all my assigned checks within the internship period. When I met unfamiliar technical matters in the model, I asked experienced team members for clarification rather than making assumptions. At Palathra Constructions, I learned the relevant building standards quickly by asking questions and applying them to the work I observed.</p>
+
+        <h3>A demonstrated ability to work as part of a team and to show leadership when required <span class="ref">(3.6)</span></h3>
+        <p>During my B.Tech, I led a team of four on a year-long project, “Green Waste Utilisation for Sustainable Energy Engineering Application” (May 2023 to May 2024), in which we built an energy storage system using materials made from locally available green waste. The project required several materials to be tested within a limited time, including banana skin, coconut fibre and pineapple skin as sources of activated carbon. As team leader, I divided the work between the four team members according to each person’s strengths and availability, and I checked and compared the results each member produced so that our findings were consistent before we drew conclusions. This kept the team’s work coordinated and reliable. The project received a good mark and positive feedback. On BASIS, I applied the same approach as a team member, completing my own tasks while keeping my findings aligned with the wider UTS and UNSW project goals.</p>
+
+        <p>I am particularly interested in joining Industrus Engineering because the Graduate Program offers experience across different project roles and divisions, along with innovative projects and digital technology, which builds on my experience in transport modelling and my interest in developing a broad civil engineering skill set.</p>
+
+        <p>I would welcome the opportunity to discuss my application and how my postgraduate engineering education, my BASIS internship and my project leadership experience could contribute to Industrus Engineering. I can be contacted by email or phone at your convenience, and I have attached my resume for your consideration.</p>
+
+        <p>I look forward to the opportunity to discuss my application further.</p>
+
+        <p class="sign">Regards,<br>Jerin Joseph Abraham</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- PART 4: REFLECTION -->
+<section id="page-reflection" data-page="reflection" hidden>
+  <div class="wrap">
+    <div class="page-head">
+      <h1>Reflection on my internship</h1>
+    </div>
+    <div class="letter-wrap">
+      <article class="letter">
+        <p>Before I began the internship on the BASIS project, I expected the placement to be similar to the site-based work I had done at Palathra Constructions — hands-on, physical, and focused on watching construction activity in real time. I thought a transport modelling placement would mean sitting through demonstrations of software rather than being responsible for output that other people relied on.</p>
+
+        <p>The reality was different. From early on I was given real Sydney network maps to check and real code and metric calculations to review, and the issues I found were treated as genuine findings that the UNSW team needed to act on, not as training exercises. I had not expected how much the accuracy of a single network connection could affect a whole set of results, or how much independent judgement was required to decide when something looked wrong enough to flag. I also had not expected to be documenting findings for a team I never met in person, which meant learning to write clearly enough that my evidence spoke for itself.</p>
+
+        <p>The most important lesson was the discipline of documenting and escalating rather than simply fixing what I noticed. Early in the internship it would have been easy to quietly correct an error in a map, but I learned that in a research setting, unverified changes are more dangerous than the error itself — every fix needs a record, evidence and a second set of eyes. This mattered because it taught me that quality assurance is as much about traceability as it is about catching mistakes, a principle I expect to carry into design checking and construction supervision later in my career. A second lesson came from balancing the internship with full-time study: setting aside fixed weekly blocks for map checks and providing regular updates to my supervisor kept me accountable and taught me to manage competing priorities without letting either suffer.</p>
+
+        <p>After this experience, I would describe my value proposition to an employer as a combination of methodical attention to detail and the ability to communicate technical findings clearly to people outside my immediate team. I can demonstrate this through the connectivity error I identified and documented on BASIS, which was corrected on the strength of the evidence I provided rather than requiring further explanation from me, and through the consistency I maintained leading a team of four on my undergraduate energy storage project.</p>
+
+        <p>The internship also shifted the type of role I am interested in. Before BASIS, I expected to move directly into construction site supervision, following on from my experience at Palathra Constructions. Having now worked on the modelling and quality-assurance side of a major infrastructure project, I am more drawn to roles that combine technical review with construction delivery — such as project engineering or quality assurance positions — where the same discipline of checking, documenting and communicating findings applies whether the "site" is a physical one or a digital network model.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <p>Jerin Joseph Abraham, Graduate Civil Engineer</p>
+    <p><a href="mailto:jerinjosephabraham1@gmail.com">Email</a> · <a href="https://www.linkedin.com/in/jerin-joseph-abraham-ba31b220a" target="_blank" rel="noopener">LinkedIn</a></p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var titles = {
+    'home': 'Jerin Joseph Abraham | Graduate Civil Engineer',
+    'resume': 'Resume | Jerin Joseph Abraham',
+    'cover-letter': 'Cover letter | Jerin Joseph Abraham',
+    'reflection': 'Reflection | Jerin Joseph Abraham'
+  };
+
+  function route(moveFocus) {
+    var key = (window.location.hash || '').replace('#', '');
+    if (!titles[key]) { key = 'home'; }
+    var pages = document.querySelectorAll('[data-page]');
+    for (var i = 0; i < pages.length; i++) {
+      pages[i].hidden = pages[i].getAttribute('data-page') !== key;
+    }
+    var links = document.querySelectorAll('.site-nav [data-target]');
+    for (var j = 0; j < links.length; j++) {
+      if (links[j].getAttribute('data-target') === key) {
+        links[j].setAttribute('aria-current', 'page');
+      } else {
+        links[j].removeAttribute('aria-current');
+      }
+    }
+    document.title = titles[key];
+    if (moveFocus) {
+      window.scrollTo(0, 0);
+      var main = document.getElementById('main');
+      if (main) { main.focus({ preventScroll: true }); }
+    }
+  }
+
+  window.addEventListener('hashchange', function () { route(true); });
+  route(false);
+
+  var net = document.getElementById('net');
+  var btn = document.getElementById('net-toggle');
+  var status = document.getElementById('net-status');
+  var broken = 'The cycleway stops short of the intersection. Cyclists take a long detour, so the model reports inflated travel times.';
+  var fixed = 'With the link connected, cyclists cross directly and reported travel times match the real network.';
+
+  if (net && btn && status) {
+    btn.addEventListener('click', function () {
+      var connected = net.classList.toggle('is-connected');
+      btn.textContent = connected ? 'Break the link' : 'Connect the link';
+      status.textContent = connected ? fixed : broken;
+    });
+  }
+})();
+</script>
+</body>
+</html>
